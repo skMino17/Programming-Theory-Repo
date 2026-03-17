@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class LightFollowMouse : MonoBehaviour
@@ -8,13 +9,34 @@ public class LightFollowMouse : MonoBehaviour
 
     private Camera _mainCam;
 
+    public static LightFollowMouse Instance; 
+    private Light _lightComponent;
+
+    void Awake()
+    {
+        Instance = this;
+        _lightComponent = GetComponent<Light>();
+
+        _lightComponent.enabled = false;
+    }
+
     void Start()
     {
         _mainCam = Camera.main;
+        StartCoroutine(DelayedPowerOn());
+    }
 
-        if (_mainCam == null)
+    private IEnumerator DelayedPowerOn()
+    {
+        yield return new WaitForSeconds(1f);
+        _lightComponent.enabled = true;
+    }
+
+    public void UpdateLightColor(Color newColor)
+    {
+        if (_lightComponent != null)
         {
-            Debug.LogError("Hey! There is no camera tagged 'MainCamera' in the scene.");
+            _lightComponent.color = newColor;
         }
     }
 

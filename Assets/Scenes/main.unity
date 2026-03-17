@@ -246,7 +246,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b525764a363e64f95b903f393a3824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GreenShape
-  _shapeName: 
+  _shapeName: Green
+  shapeColor: {r: 0, g: 1, b: 0.09019608, a: 0}
 --- !u!1 &52628213
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,7 +557,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd3be68befd99f044987e3e13263fb2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BlueShape
-  _shapeName: 
+  _shapeName: Blue
+  shapeColor: {r: 0.33490568, g: 0.6149454, b: 1, a: 0}
 --- !u!1 &183755717
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,6 +887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GreenShape
   _shapeName: 
+  shapeColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &241759072
 GameObject:
   m_ObjectHideFlags: 0
@@ -1411,6 +1414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BlueShape
   _shapeName: 
+  shapeColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1116309562
 GameObject:
   m_ObjectHideFlags: 0
@@ -1652,7 +1656,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dc3477b2081d654daf53c3a415ac8d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MagentaShape
-  _shapeName: 
+  _shapeName: Magenta
+  shapeColor: {r: 1, g: 0, b: 1, a: 0}
 --- !u!1 &1271418376
 GameObject:
   m_ObjectHideFlags: 0
@@ -2272,7 +2277,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2439ff18fad6a364bbc2cd55dd8d650b, type: 2}
+  - {fileID: 2100000, guid: 52fc71edaa7d8274281ece930763eb88, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

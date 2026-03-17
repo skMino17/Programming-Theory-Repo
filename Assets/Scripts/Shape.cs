@@ -3,6 +3,9 @@ using UnityEngine;
 public abstract class Shape : MonoBehaviour
 {
     [SerializeField] private string _shapeName;
+
+    [SerializeField] private Color shapeColor;
+    public Color GetColor => shapeColor;
     public string ShapeName
     {
         get => _shapeName;
@@ -17,5 +20,7 @@ public abstract class Shape : MonoBehaviour
     protected void OnMouseDown()
     {
         DisplayText();
+        // Tell the light to change color
+        LightFollowMouse.Instance.UpdateLightColor(GetColor);
     }
 }
