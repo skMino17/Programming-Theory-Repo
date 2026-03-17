@@ -13,15 +13,13 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject welcomePanel;
     [SerializeField] private TextMeshProUGUI welcomeText;
 
-    void Awake()
-    {
-        Instance = this;
-    }
+    void Awake() { Instance = this; }
 
-    void Start()
-    {
-        ShowWelcomeMessage();
-    }
+    void Start() { ShowWelcomeMessage(); }
+
+    // ABSTRACTION: This method hides the complexity of UI state management.
+    // The caller doesn't need to know that we are turning off the welcome panel, 
+    // enabling the main panel, and updating text all at once.
 
     public void ShowMessage(string message)
     {

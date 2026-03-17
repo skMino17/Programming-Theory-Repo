@@ -6,6 +6,9 @@ public class MenuManager : MonoBehaviour
 {
     [SerializeField] private TMP_InputField nameField;
 
+    // ABSTRACTION: Hiding the details of saving data and loading scenes 
+    // behind a single "Start" button interaction.
+
     public void StartGame()
     {
         if (MainManager.Instance != null)

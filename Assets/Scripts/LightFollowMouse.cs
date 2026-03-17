@@ -3,13 +3,12 @@ using UnityEngine;
 
 public class LightFollowMouse : MonoBehaviour
 {
-    [SerializeField] private float distanceFromCamera = 10f;
     [SerializeField] private float smoothSpeed = 0.125f;
     [SerializeField] private LayerMask floorLayer;
 
     private Camera _mainCam;
 
-    public static LightFollowMouse Instance; 
+    public static LightFollowMouse Instance;
     private Light _lightComponent;
 
     void Awake()
@@ -32,6 +31,8 @@ public class LightFollowMouse : MonoBehaviour
         _lightComponent.enabled = true;
     }
 
+    // ABSTRACTION: This method abstracts the internal details of how the 
+    // Light component's color is set, providing a simple interface for other classes.
     public void UpdateLightColor(Color newColor)
     {
         if (_lightComponent != null)
